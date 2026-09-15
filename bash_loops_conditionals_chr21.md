@@ -75,6 +75,10 @@ Paste your code below:
 ```bash
 #Paste here:
 >bash-3.2$ mkdir -p september_14
+>bash-3.2$ pwd
+>/Users/jasonlooney/Documents/BTEC_640/class_exercises
+>bash-3.2$ ls
+>september_14
 
 
 
@@ -173,8 +177,10 @@ Forget about the command line, what is the logical workflow or syntax that you w
 Type your answer:
 
 Step 1:
-
-
+grep "chr21" hg38.ncbiRefSeq.gtf
+grep "chr21" hg38.ncbiRefSeq.gtf > chr21.gtf
+bash-3.2$ grep -c "chr21" hg38.ncbiRefSeq.gtf
+52142
 
 
 
@@ -218,7 +224,7 @@ grep -c "chr21" hg38.ncbiRefSeq.gtf
 >❓ **Question**: What is the total line count for a GTF file filtered for chr21?</b>
 ```
 Type your answer:
-
+52142
 
 ```
 
@@ -234,7 +240,7 @@ grep "chr21" hg38.ncbiRefSeq.gtf > chr21.gtf
 
 ```
 Type your answer:
-
+It would only record the number 52142
 
 
 
@@ -246,7 +252,7 @@ Type your answer:
 >:question: Let's get familiar with our GTF file, in which column is this information?
 ```
 Type your answer:
-
+Column 9
 
 
 
@@ -345,7 +351,7 @@ gene_id "LSS"; transcript_id "NM_001145436.2"; exon_number "17"; exon_id "NM_001
 >❓ **Question**: Using `awk`, what would you do to split column 9, don't type the code, just your logic.</b>
 ```
 Type your answer:
-
+just print the frist 4 or 5 lines instead of all 9
 
 
 

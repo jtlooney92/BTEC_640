@@ -74,6 +74,7 @@ Paste your code below:
 
 ```bash
 #Paste here:
+>bash-3.2$ mkdir -p september_14
 
 
 

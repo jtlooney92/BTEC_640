@@ -1,12 +1,4 @@
-#Paste here:
->bash-3.2$ pwd
->/Users/jasonlooney
->bash-3.2$ cd /Users/jasonlooney/Documents/BTEC_640/class_exercises/september_14/analysis
->bash-3.2$ pwd
->/Users/jasonlooney/Documents/BTEC_640/class_exercises/september_14/analysis
->bash-3.2$ ls
->chr21.gtf		hg38.ncbiRefSeq.gtf	refseq_chr21.gtf
->bash-3.2$ 
+
 #1 Move and make working directories
 cd btec_640/class_exercises/ # move directory
 mkdir -p september_14
@@ -16,7 +8,6 @@ cd september_14/input_data
 
 #download the chr21 data
 curl -o hg38.ncbiRefSeq.gtf.gz "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/genes/hg38.ncbiRefSeq.gtf.gz"
->less hg38.ncbiRefSeq.gtf.gz
 
 #3 unzipping the data
 gunzip hg38.ncbiRefSeq.gtf.gz
@@ -25,7 +16,7 @@ gunzip hg38.ncbiRefSeq.gtf.gz
 ln -s ../input_data/hg38.ncbiRefSeq.gtf
 
 #filter data into meaningful categories
-grep "chr21" hg38.ncbiRefSeq.gtf
+grep "chr21" hg38.ncbiRefSeq.gtf > chr21.gtf
 
 grep "NM_" chr21.gtf > refseq_chr21.gtf
 
